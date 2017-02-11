@@ -1,2 +1,2 @@
-# Zaps
-Automations scripts build on Code by Zapier
+# Scripts
+Business automations scripts build on Code by Zapier and Google Apps Script
