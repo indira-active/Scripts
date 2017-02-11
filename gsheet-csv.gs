@@ -1,3 +1,5 @@
+/* Google Apps Script */
+
 /* Send Spreadsheet in an email as CSV & save to Drive, automatically */
 function emailSpreadsheetAsCSV() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
