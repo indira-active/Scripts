@@ -1,6 +1,8 @@
+# Code by Zapier Python Script to process orders. Part 1 of 2.
 output = []
 
 items = input_data['items'].split('|')
+# For each item in order, call Part 2 to process item
 for item in items[:-1]:
     item = "{" + str(item) + "}"
     d = eval(item)
