@@ -11,20 +11,20 @@ import sys
 # This assumes the use of a private app
 # See: https://help.shopify.com/manual/apps/private-apps#generate-credentials-from-the-shopify-admin
 shop_url = "https://%s:%s@%s.myshopify.com/admin" % (
-  sys.argv[1], #os.environ['SHOPIFY_API_KEY'],
-  sys.argv[2], #os.environ['SHOPIFY_PASSWORD'],
-  sys.argv[3], #os.environ['SHOP_NAME'],
+  sys.argv[1], # SHOPIFY_API_KEY
+  sys.argv[2], # SHOPIFY_PASSWORD
+  sys.argv[3], # SHOP_NAME
 )
 shopify.ShopifyResource.set_site(shop_url)
 
 # Setup a connection to Fulfil
 fulfil = Client(
-  sys.argv[4], #os.environ['FULFIL_SUBDOMAIN'],
-  sys.argv[5] #os.environ['FULFIL_API_KEY'],
+  sys.argv[4], # FULFIL_SUBDOMAIN
+  sys.argv[5] # FULFIL_API_KEY
 )
 ProductSupplier = fulfil.model('purchase.product_supplier')
 
-supplier_code = sys.argv[6] #os.environ['SUPPLIER_CODE']
+supplier_code = sys.argv[6] # SUPPLIER_CODE
 
 
 def fetch_inventory_and_update():
